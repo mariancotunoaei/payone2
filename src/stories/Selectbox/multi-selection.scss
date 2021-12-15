@@ -1,0 +1,49 @@
+@import '../../globals/styles/theme';
+
+.multi-selectbox {
+    .css-1pahdxg-control {
+        box-shadow: $ACTIVE-ELEMENT-SHADOW-CONFIG;
+    }
+
+    [class$='-control'] {
+        min-height: $FORM-ELEM-HEIGHT;
+        border-color: $INACTIVE-ELEMENT-BORDER-COLOR;
+        border-radius: $FORM-ELEM-BORDER-RADIUS;
+    }
+
+    [class$='-multiValue'] {
+        font-size: 14px;
+        padding: 2px;
+    }
+
+    // when field is disabled
+    &.css-3iigni-container {
+        pointer-events: unset;
+    }
+
+    // when field is disabled
+    .css-1insrsq-control {
+        cursor: not-allowed;
+    }
+
+    &.not-valid-field {
+        div[class$='-control'] {
+            border-color: $NOT-VALID-FIELD-COLOR !important;
+        }
+    }
+}
+
+// adding effects for hover (but not for disabled fields)
+.multi-selectbox:not(.css-3iigni-container):hover {
+    [class$='-control'] {
+        border: 2px solid $ACTIVE-ELEMENT-BORDER-COLOR;
+    }
+
+    [class$='-indicatorSeparator'] {
+        background-color: $ACTIVE-ELEMENT-BORDER-COLOR;
+    }
+
+    [class$='-indicatorContainer'] {
+        color: $ACTIVE-ELEMENT-BORDER-COLOR;
+    }
+}

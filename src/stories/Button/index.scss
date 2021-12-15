@@ -1,0 +1,88 @@
+@import '../../globals/styles/theme';
+
+.payone-button {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Volte;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  border-radius: 100px;
+  margin: 0 5px;
+  padding: 14px 24px 10px 24px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.primary-button {
+  background: $PAYONE-BLUE;
+  color: $PAYONE-WHITE;
+  border-width: 0;
+  
+  &:hover {
+    background: $DUNKEL-BLUE;
+  }
+
+  &:focus {
+    background: $MITTEL-BLUE;
+  }
+  
+  &:disabled {
+    background: $HELL-BLUE !important;
+    color: $PAYONE-WHITE !important;
+    border-style: none !important;
+  }
+}
+
+.secondary-button {
+  background: $PAYONE-WHITE;
+  color: $PAYONE-BLUE;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $PAYONE-BLUE;
+  
+  &:hover {
+    color: $PAYONE-BLACK;
+    border-color: $PAYONE-BLACK;
+  }
+
+  &:focus {
+    background: $MITTEL-BLUE;
+    color: $PAYONE-WHITE;
+    border-color: transparent;
+  }
+
+  &:disabled {
+    color: $HELL-BLUE !important;
+    border-color: $HELL-BLUE !important;
+  }
+}
+
+.tertiary-button {
+  background: transparent;
+  color: $PAYONE-BLUE;
+  border-style: none;
+  
+  &:hover {
+    color: $PAYONE-BLACK;
+  }
+
+  &:focus {
+    color: $MITTEL-BLUE;
+  }
+
+  &:disabled {
+    color: $HELL-BLUE !important;
+  }
+}

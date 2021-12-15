@@ -1,0 +1,14 @@
+@import '../../globals/styles/theme';
+
+.bullet-free-text-wrapper {
+    ul {
+        padding-left: 15px;
+
+        li a {
+            color: $PAYONE-BLUE;
+        }
+        li a:visited {
+            color: $DUNKEL-BLUE;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export const SCREEN_TRANSITION_DURATION = 300;

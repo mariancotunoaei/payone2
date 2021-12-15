@@ -1,0 +1,82 @@
+@import 'globals/styles/theme.scss';
+@import 'globals/styles/scrollbar.scss';
+
+* {
+    margin: 0;
+    font-family: 'Volte';
+}
+
+#root {
+    overflow-x: hidden;
+}
+
+.Toastify__toast-container {
+    z-index: 99999;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='number'],
+textarea {
+    -webkit-appearance: none;
+}
+
+a,
+area,
+button,
+[role='button'],
+input:not([type='range']),
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
+
+label {
+    overflow-wrap: break-word;
+    font-family: 'Volte';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.02em;
+    color: $PAYONE-BLACK;
+}
+
+.label-for-field {
+    overflow-wrap: break-word;
+    font-family: 'Volte';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.02em;
+    color: $PAYONE-BLACK;
+    display: flex;
+    justify-content: space-between;
+}
+
+.optional-sign-field-label {
+    color: $GREY_400;
+}
+
+textarea:hover {
+    border-color: $ACTIVE-ELEMENT-BORDER-COLOR !important;
+    border-right-width: 1px !important;
+}
+
+textarea:focus {
+    border-color: $ACTIVE-ELEMENT-BORDER-COLOR;
+    box-shadow: $ACTIVE-ELEMENT-SHADOW-CONFIG;
+    border-right-width: 1px !important;
+    outline: 0;
+}
+
+.datepicker-wrapper.not-valid-field {
+    border-color: unset !important;
+
+    .react-datepicker-wrapper {
+        border-color: $NOT-VALID-FIELD-COLOR !important;
+    }
+}

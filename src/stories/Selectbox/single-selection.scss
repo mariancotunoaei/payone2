@@ -1,0 +1,102 @@
+@import '../../globals/styles/theme';
+
+.selectbox {
+    font-size: 18px;
+    margin: $FORM-ELEM-MARGIN;
+
+    .css-1pahdxg-control {
+        box-shadow: $ACTIVE-ELEMENT-SHADOW-CONFIG;
+    }
+
+    [class$='-control'] {
+        height: $FORM-ELEM-HEIGHT;
+        background-color: $GREY_100;
+        border-color: $INACTIVE-ELEMENT-BORDER-COLOR;
+        border-radius: $FORM-ELEM-BORDER-RADIUS;
+        box-shadow: $INPUTS-INNER-SHADOW;
+
+        & > div:first-child {
+            padding: 0;
+        }
+    }
+
+    // when field is disabled
+    &.css-3iigni-container {
+        pointer-events: unset;
+    }
+
+    [class$='-singleValue'],
+    [class$='-placeholder'] {
+        margin-left: 0;
+        margin-right: 0;
+        padding: $FORM-ELEM-PADDING;
+    }
+
+    [class$='-singleValue'] {
+        color: $PAYONE-BLACK;
+    }
+
+    [class$='-placeholder'] {
+        color: $GREY_400;
+    }
+
+    // option when hover
+    .css-1n7v3ny-option {
+        background-color: $GREY_100;
+    }
+
+    // selected option
+    .css-9gakcf-option {
+        background-color: $PAYONE-BLUE;
+    }
+
+    [class$='-option'] {
+        padding: 12px;
+    }
+
+    // when field is disabled
+    .css-1insrsq-control {
+        cursor: not-allowed;
+    }
+
+    [class$='-IndicatorsContainer'] {
+        height: 100%;
+    }
+
+    [class$='-indicatorSeparator'] {
+        width: 0;
+    }
+
+    &.not-valid-field {
+        div[class$='-control'] {
+            border-color: $NOT-VALID-FIELD-COLOR !important;
+        }
+    }
+
+    &.focused-selectbox {
+        [class$='-control'] {
+            border: 2px solid $ACTIVE-ELEMENT-BORDER-COLOR !important;
+        }
+    }
+
+    [class$='-menu'] {
+        overflow-x: hidden;
+        border-radius: 16px;
+    }
+
+    [class$='-MenuList'] {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+// adding effects for hover (but not for disabled fields)
+.selectbox:not(.css-3iigni-container):hover {
+    [class$='-control'] {
+        border: 1px solid $HOVERED-ELEMENT-BORDER-COLOR;
+    }
+
+    [class$='-indicatorContainer'] {
+        color: $HOVERED-ELEMENT-BORDER-COLOR;
+    }
+}

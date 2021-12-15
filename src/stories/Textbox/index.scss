@@ -1,0 +1,84 @@
+@import '../../globals/styles/theme';
+
+.textbox {
+    display: inline-block;
+    height: $FORM-ELEM-HEIGHT;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: $FORM-ELEM-MARGIN;
+    padding: $FORM-ELEM-PADDING;
+    position: relative;
+    background: $GREY_100;
+    background-image: none;
+    color: $PAYONE-BLACK;
+    box-shadow: $INPUTS-INNER-SHADOW;
+    font-size: 18px;
+    font-family: 'Volte';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 136%;
+    border: 1px solid $INACTIVE-ELEMENT-BORDER-COLOR;
+    border-radius: $FORM-ELEM-BORDER-RADIUS;
+    transition: all 0.3s;
+
+    &[type='number'] {
+        /* Firefox */
+        -moz-appearance: textfield;
+        /* Chrome, Safari, Edge, Opera */
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    &:hover {
+        border-color: $HOVERED-ELEMENT-BORDER-COLOR !important;
+        border-width: 1px !important;
+    }
+
+    &:focus {
+        border-color: $ACTIVE-ELEMENT-BORDER-COLOR !important;
+        border-width: 2px !important;
+        outline: 0;
+    }
+
+    &:disabled {
+        border-color: $INACTIVE-ELEMENT-BORDER-COLOR !important;
+        background: $INACTIVE-ELEMENT-BACKGROUND-COLOR;
+        cursor: not-allowed;
+    }
+
+    &:disabled + .field-icon-placed-inside {
+        color: $INACTIVE-ELEMENT-FONT-COLOR;
+        cursor: not-allowed;
+    }
+}
+
+.field-icon-placed-inside {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 20px;
+}
+
+.not-valid-field {
+    border-color: $NOT-VALID-FIELD-COLOR !important;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $GREY_400;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $GREY_400;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $GREY_400;
+}

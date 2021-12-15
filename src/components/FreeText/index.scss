@@ -1,0 +1,11 @@
+@import '../../globals/styles/theme';
+
+.freetext-wrapper {
+  a {
+    color: $PAYONE-BLUE;
+  }
+
+  a:visited {
+    color: $DUNKEL-BLUE;
+  }
+}

@@ -1,0 +1,30 @@
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #bbb;
+}
+
+/* Scrollbar Styling */
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 0.5vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/**********************/

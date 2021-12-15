@@ -1,0 +1,16 @@
+@import '../../globals/styles/theme';
+
+.file-uploader-control {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4px 0px 8px 0px;
+  padding: 10px;
+  min-height: 48px;
+  border: 1px dashed blue;
+  cursor: pointer;
+  border-radius: 22px;
+  box-sizing: border-box;
+}
